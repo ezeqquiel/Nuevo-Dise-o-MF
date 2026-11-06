@@ -2,6 +2,14 @@
 
 Fecha: 2026-11-05 · Basado en `assets/BRIEF-MF-Soluciones-Electricas.md`.
 
+## Ajustes v1.3 (2026-11-06, revisión en GitHub Pages)
+
+- **Hero en mobile más arriba:** el texto iba pegado abajo (`justify-content: flex-end`) y dejaba media pantalla vacía arriba; ahora va centrado (en 425 × 835 el título arranca ~165 px desde arriba en vez de ~420).
+- **Sin botón amarillo de WhatsApp en el header** (lo sobrecargaba). WhatsApp sigue en el hero, el flotante, cada sección y Contacto.
+- **Sin formulario:** todo el contacto es por WhatsApp, para que no se dispersen los clientes. Se borraron el HTML, el CSS y la validación/envío en `main.js` (incluida la alternativa Formspree). Contacto queda: WhatsApp (Emanuel, Pablo, urgencia) a la izquierda y datos + mapa a la derecha en desktop; uno debajo del otro en mobile. "Cómo trabajamos" paso 1: "Por WhatsApp, y nos contás qué necesitás."
+- **TikTok @mf.electricistas** (`CONFIG.tiktok`): en Contacto, en el footer y en `sameAs` del JSON-LD.
+- **Verificado:** test11 (68 chequeos, con los nuevos: sin formulario ni CTA en el header, TikTok en contacto/footer/schema, posición del hero), test12 (56) y test13 (49) en verde; consola sin errores.
+
 ## Reseñas de Google (2026-11-06)
 
 - **Sección nueva en `#opiniones`** (reemplaza los 3 testimonios [[PENDIENTE]] y el link a Instagram): título "Lo que dicen nuestros clientes", bajada "Reseñas reales de clientes en Google.", resumen (5,0 + 5 estrellas + "8 reseñas en Google" + pin "Google" en tipografía neutra, no el logo oficial), 6 tarjetas y CTAs "Ver todas las reseñas en Google" y "¿Ya trabajamos juntos? Dejanos tu reseña".

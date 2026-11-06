@@ -1,7 +1,7 @@
 /* ==========================================================================
    MF - Soluciones Eléctricas · v1.2
    Menú, datos de config, carrusel del hero, selector de socio para WhatsApp,
-   galería de obras + filtros + álbum (lightbox), reseñas de Google, formulario, animaciones.
+   galería de obras + filtros + álbum (lightbox), reseñas de Google, animaciones.
    Depende de js/config.js (CONFIG), js/obras.js (OBRAS) y js/resenas.js (RESENAS_GOOGLE).
    ========================================================================== */
 (function () {
@@ -60,6 +60,7 @@
     // "copiar link", o si el selector no llega a abrirse).
     document.querySelectorAll("[data-wa]").forEach((a) => { a.href = waLink(principal, mensajeDe(a)); });
     document.querySelectorAll("[data-ig]").forEach((a) => { a.href = CONFIG.instagram; });
+    document.querySelectorAll("[data-tt]").forEach((a) => { a.href = CONFIG.tiktok; });
     document.querySelectorAll("[data-config]").forEach((el) => {
       const valor = CONFIG[el.dataset.config];
       if (valor) el.textContent = valor;
@@ -547,85 +548,6 @@
     requestAnimationFrame(paso);
   }
 
-  /* ---------- Formulario de contacto ---------- */
-  const REGLAS = {
-    nombre: (v) => v.length >= 2 || "Contanos tu nombre.",
-    telefono: (v) => v.replace(/\D/g, "").length >= 8 || "Dejanos un teléfono válido (con característica).",
-    zona: (v) => v.length >= 2 || "Indicá tu barrio o localidad.",
-    tipo: (v) => v !== "" || "Elegí el tipo de trabajo.",
-    mensaje: (v) => v.length >= 10 || "Contanos un poco más (al menos 10 caracteres)."
-  };
-
-  function validarCampo(campo) {
-    const resultado = REGLAS[campo.name](campo.value.trim());
-    const error = document.getElementById("e-" + campo.name);
-    const ok = resultado === true;
-    campo.setAttribute("aria-invalid", String(!ok));
-    error.textContent = ok ? "" : resultado;
-    return ok;
-  }
-
-  function initFormulario(selector) {
-    const form = document.getElementById("contact-form");
-    const status = document.getElementById("form-status");
-    const submit = form.querySelector(".form__submit");
-    const campos = Array.from(form.querySelectorAll("input, select, textarea"));
-
-    campos.forEach((campo) => {
-      campo.addEventListener("blur", () => { if (campo.value.trim()) validarCampo(campo); });
-      campo.addEventListener("input", () => { if (campo.getAttribute("aria-invalid") === "true") validarCampo(campo); });
-    });
-
-    form.addEventListener("submit", (e) => {
-      e.preventDefault();
-      status.textContent = "";
-      status.classList.remove("is-ok");
-
-      const invalidos = campos.filter((campo) => !validarCampo(campo));
-      if (invalidos.length) {
-        invalidos[0].focus();
-        return;
-      }
-
-      const datos = Object.fromEntries(campos.map((c) => [c.name, c.value.trim()]));
-      enviarConsulta(datos, selector, submit);
-      status.textContent = "¡Genial! Elegí con quién hablar y te abrimos WhatsApp con tu consulta lista para enviar.";
-      status.classList.add("is-ok");
-    });
-  }
-
-  /**
-   * Punto único de envío del formulario.
-   * v1.1: arma el mensaje y abre el selector Emanuel / Pablo (no necesita backend).
-   * Para mandarlo por mail, cambiar por enviarPorFormspree(datos) (abajo).
-   */
-  function enviarConsulta(datos, selector, desde) {
-    const mensaje = [
-      "¡Hola MF! Les escribo desde la web.",
-      "",
-      "*Nombre:* " + datos.nombre,
-      "*Teléfono:* " + datos.telefono,
-      "*Barrio / localidad:* " + datos.zona,
-      "*Tipo de trabajo:* " + datos.tipo,
-      "*Consulta:* " + datos.mensaje
-    ].join("\n");
-    selector.abrir(mensaje, desde);
-  }
-
-  /*
-  // Alternativa por mail (Formspree). Crear el form en formspree.io y pegar el ID.
-  // Web3Forms es igual: POST a https://api.web3forms.com/submit con access_key.
-  async function enviarPorFormspree(datos) {
-    const res = await fetch("https://formspree.io/f/TU_ID", {
-      method: "POST",
-      headers: { "Content-Type": "application/json", Accept: "application/json" },
-      body: JSON.stringify(datos)
-    });
-    if (!res.ok) throw new Error("No se pudo enviar");
-    // Cambiar el mensaje de éxito a: "¡Genial! Recibimos tu consulta, te escribimos a la brevedad."
-  }
-  */
-
   /* ---------- Etiqueta "¿Hablamos?" del botón flotante (una sola vez) ---------- */
   function initTooltipWhatsApp() {
     const boton = document.querySelector(".wa-float");
@@ -641,12 +563,11 @@
   }
 
   aplicarConfig();
-  const selector = initSelectorWhatsApp();
+  initSelectorWhatsApp();
   initHeader();
   initHeroCarrusel();
   initGaleria();
   initResenas();
   initReveal();
-  initFormulario(selector);
   initTooltipWhatsApp();
 })();

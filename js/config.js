@@ -19,6 +19,8 @@ const CONFIG = {
   whatsappMensaje: "¡Hola MF! Les escribo desde la web. Quería consultar por un trabajo eléctrico.",
   instagram: "https://instagram.com/mf.electricistas",
   instagramUser: "@mf.electricistas",
+  tiktok: "https://www.tiktok.com/@mf.electricistas",
+  tiktokUser: "@mf.electricistas",
   zona: "Rosario y Gran Rosario",
   horario: "Lunes a Sábados · 09 a 16 hs",
   email: "" // PENDIENTE: si tienen mail (si queda vacío, no se muestra)

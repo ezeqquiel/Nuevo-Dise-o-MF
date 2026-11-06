@@ -1,4 +1,4 @@
-# MF - Soluciones Eléctricas · Sitio web v1.1
+# MF - Soluciones Eléctricas · Sitio web v1.3
 
 One-page para MF - Soluciones Eléctricas (Emanuel y Pablo, electricistas en Rosario y Gran Rosario). HTML + CSS + JavaScript vanilla, sin frameworks ni build. Hecho por ZZ Digital.
 
@@ -20,7 +20,7 @@ css/styles.css          estilos (mobile-first, paleta en :root)
 js/config.js            DATOS DEL NEGOCIO (socios + WhatsApp, IG, horario, zona, email)
 js/obras.js             obras de la galería (una por carpeta, con su álbum) y carrusel del hero
 js/resenas.js           reseñas de Google: puntaje, cantidad, textos y links al perfil
-js/main.js              menú, galería, filtros, álbum (lightbox), reseñas, formulario, animaciones
+js/main.js              menú, galería, filtros, álbum (lightbox), reseñas, animaciones
 assets/logo/            logo: logo-mf.png (fondo claro) y logo-mf-claro.png (fondo oscuro, el que usa la web)
 assets/estudios/        logos de Dika, M. y Malawi Studio
 assets/obras/<slug>/    fotos optimizadas de cada obra: 01.jpg, 02.jpg, ... (las que usa la web)
@@ -42,7 +42,7 @@ NOTAS-V1.md             decisiones y pendientes
    ```
    - `whatsapp`: formato internacional sin `+` ni espacios: `549` + característica sin el 0 + número sin el 15.
    - `telefonoVisible`: como se lee en la web.
-   - No hay que tocar nada más: todos los botones de WhatsApp (header, hero, servicios, obras, contacto, footer, flotante y formulario) abren el selector "¿Con quién querés hablar?" con estos números, las tarjetas de Contacto muestran cada teléfono, y el Schema.org para Google toma el de Emanuel (el primero de la lista) como `telephone`.
+   - No hay que tocar nada más: todos los botones de WhatsApp (hero, servicios, obras, contacto, footer y flotante) abren el selector "¿Con quién querés hablar?" con estos números, las tarjetas de Contacto muestran cada teléfono, y el Schema.org para Google toma el de Emanuel (el primero de la lista) como `telephone`.
    - `foto`: avatar cuadrado (ej. `assets/equipo/emanuel.jpg`; hoy los dos están vacíos). Si queda vacío, se muestra la inicial.
 2. **Email** (opcional) → `js/config.js` `email`. Si queda vacío, no se muestra.
 3. **Logo** → ya está (la lamparita, en header, footer y favicon). Si llega en mejor calidad, reemplazar los PNG de `assets/logo/` y `assets/favicon.png` con los mismos nombres.
@@ -98,9 +98,9 @@ Las reseñas **no se actualizan solas**: conviene revisar el perfil de Google ca
 - **Link para dejar reseña:** cuando tengan el link directo de "Pedir reseñas" (Perfil de Google → Pedir reseñas, tipo `g.page/r/.../review`), ponerlo en `dejarResenaUrl`. Hoy apunta al perfil.
 - **Schema:** el perfil está en `sameAs` del JSON-LD de `index.html` (si cambia el link, cambiarlo también ahí). A propósito **no** hay `aggregateRating` ni `review`: Google no muestra estrellas de reseñas que el negocio publica en su propia web y puede tomarlo como markup engañoso.
 
-## Formulario
+## Contacto: solo WhatsApp
 
-No hay backend: al enviar, valida y abre el selector Emanuel / Pablo con la consulta armada. Para que llegue por mail, en `js/main.js` cambiar el cuerpo de `enviarConsulta()` por `enviarPorFormspree(datos)` (está escrito y comentado justo debajo).
+A pedido de MF no hay formulario: todo el contacto va por WhatsApp (tarjetas de Emanuel y Pablo, urgencias, botón flotante y los botones de cada sección), para que las consultas no se dispersen. Instagram y TikTok salen de `CONFIG.instagram` / `CONFIG.tiktok` en `js/config.js`.
 
 ## Modo oscuro / claro
 

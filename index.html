@@ -59,7 +59,7 @@
       { "@type": "Person", "name": "Emanuel" },
       { "@type": "Person", "name": "Pablo" }
     ],
-    "sameAs": ["https://instagram.com/mf.electricistas", "https://maps.app.goo.gl/8yvqtyLmMafLoW5u7"]
+    "sameAs": ["https://instagram.com/mf.electricistas", "https://www.tiktok.com/@mf.electricistas", "https://maps.app.goo.gl/8yvqtyLmMafLoW5u7"]
   }
   </script>
 </head>
@@ -85,7 +85,7 @@
       <symbol id="i-left" viewBox="0 0 24 24"><path d="m15 18-6-6 6-6"/></symbol>
       <symbol id="i-right" viewBox="0 0 24 24"><path d="m9 18 6-6-6-6"/></symbol>
       <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></symbol>
-      <symbol id="i-send" viewBox="0 0 24 24"><path d="M22 2 11 13"/><path d="M22 2 15 22l-4-9-9-4z"/></symbol>
+      <symbol id="i-tiktok" viewBox="0 0 24 24"><path d="M14 3v11.5a3.5 3.5 0 1 1-3.5-3.5"/><path d="M14 3c.4 2.6 2.3 4.5 5 4.8"/></symbol>
       <symbol id="i-user" viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4 21a8 8 0 0 1 16 0"/></symbol>
       <!-- Avatares de reseñas: siluetas rellenas; --av-bg separa la cara del pelo/cuerpo -->
       <symbol id="i-hombre" viewBox="0 0 24 24"><circle cx="12" cy="9.4" r="4.4"/><path d="M3 24.5c.4-4.7 4.2-7.6 9-7.6s8.6 2.9 9 7.6z" style="stroke:var(--av-bg);stroke-width:1.2"/></symbol>
@@ -123,10 +123,6 @@
         </ul>
       </nav>
 
-      <a class="btn btn--primary btn--sm header__cta" href="#contacto" data-wa target="_blank" rel="noopener">
-        <svg class="icon" aria-hidden="true"><use href="#i-whatsapp"/></svg>
-        <span class="header__cta-long">Escribinos por WhatsApp</span><span class="header__cta-short">WhatsApp</span>
-      </a>
     </div>
   </header>
 
@@ -354,7 +350,7 @@
           <li class="step reveal">
             <span class="step__num" aria-hidden="true">1</span>
             <h3>Nos escribís</h3>
-            <p>Por WhatsApp o el formulario, y nos contás qué necesitás.</p>
+            <p>Por WhatsApp, y nos contás qué necesitás.</p>
           </li>
           <li class="step reveal">
             <span class="step__num" aria-hidden="true">2</span>
@@ -413,57 +409,18 @@
             </div>
           </div>
 
-          <form class="card form" id="contact-form" novalidate aria-labelledby="form-title">
-            <div class="form__head">
-              <h3 class="form__title" id="form-title">¿Preferís dejarnos los datos?</h3>
-              <p class="form__intro">Completalo y te armamos el mensaje para WhatsApp, listo para enviar.</p>
-            </div>
-            <div class="field">
-              <label for="f-nombre">Nombre</label>
-              <input id="f-nombre" name="nombre" type="text" autocomplete="name" required aria-describedby="e-nombre">
-              <p class="field__error" id="e-nombre"></p>
-            </div>
-            <div class="field">
-              <label for="f-telefono">Teléfono / WhatsApp</label>
-              <input id="f-telefono" name="telefono" type="tel" inputmode="tel" autocomplete="tel" required aria-describedby="e-telefono">
-              <p class="field__error" id="e-telefono"></p>
-            </div>
-            <div class="field">
-              <label for="f-zona">Barrio o localidad</label>
-              <input id="f-zona" name="zona" type="text" autocomplete="address-level2" required aria-describedby="e-zona">
-              <p class="field__error" id="e-zona"></p>
-            </div>
-            <div class="field">
-              <label for="f-tipo">Tipo de trabajo</label>
-              <select id="f-tipo" name="tipo" required aria-describedby="e-tipo">
-                <option value="">Elegí una opción</option>
-                <option>Hogar</option>
-                <option>Comercio</option>
-                <option>Obra</option>
-                <option>Interiorismo</option>
-                <option>Urgencia</option>
-                <option>Otro</option>
-              </select>
-              <p class="field__error" id="e-tipo"></p>
-            </div>
-            <div class="field field--full">
-              <label for="f-mensaje">Contanos qué necesitás</label>
-              <textarea id="f-mensaje" name="mensaje" rows="4" required aria-describedby="e-mensaje"></textarea>
-              <p class="field__error" id="e-mensaje"></p>
-            </div>
-            <button class="btn btn--primary form__submit" type="submit">
-              <svg class="icon" aria-hidden="true"><use href="#i-send"/></svg>
-              Enviar consulta
-            </button>
-            <p class="form__status" id="form-status" role="status" aria-live="polite"></p>
-          </form>
-
           <aside class="contact__info" aria-label="Más datos de contacto">
             <ul class="info-list">
               <li>
                 <svg class="icon" aria-hidden="true"><use href="#i-instagram"/></svg>
                 <div><span class="info-list__label">Instagram</span>
                   <a href="https://instagram.com/mf.electricistas" data-ig target="_blank" rel="noopener"><span data-config="instagramUser">@mf.electricistas</span></a>
+                </div>
+              </li>
+              <li>
+                <svg class="icon" aria-hidden="true"><use href="#i-tiktok"/></svg>
+                <div><span class="info-list__label">TikTok</span>
+                  <a href="https://www.tiktok.com/@mf.electricistas" data-tt target="_blank" rel="noopener"><span data-config="tiktokUser">@mf.electricistas</span></a>
                 </div>
               </li>
               <li data-email-row hidden>
@@ -515,6 +472,7 @@
         <ul class="footer__info">
           <li><svg class="icon" aria-hidden="true"><use href="#i-whatsapp"/></svg><a href="#contacto" data-wa target="_blank" rel="noopener">WhatsApp</a></li>
           <li><svg class="icon" aria-hidden="true"><use href="#i-instagram"/></svg><a href="https://instagram.com/mf.electricistas" data-ig target="_blank" rel="noopener"><span data-config="instagramUser">@mf.electricistas</span></a></li>
+          <li><svg class="icon" aria-hidden="true"><use href="#i-tiktok"/></svg><a href="https://www.tiktok.com/@mf.electricistas" data-tt target="_blank" rel="noopener">TikTok</a></li>
           <li><svg class="icon" aria-hidden="true"><use href="#i-clock"/></svg><span data-config="horario">Lunes a Sábados · 09 a 16 hs</span></li>
           <li><svg class="icon" aria-hidden="true"><use href="#i-pin"/></svg><span data-config="zona">Rosario y Gran Rosario</span></li>
         </ul>
