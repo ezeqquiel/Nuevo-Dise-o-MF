@@ -1,0 +1,8 @@
+.claude/
+
+# Material de trabajo que la web no usa (queda solo en la compu)
+_version-anterior/
+assets/img/
+assets/obras MF/
+assets/BRIEF-*.md
+assets/datos-wsp/

@@ -1,0 +1,581 @@
+<!DOCTYPE html>
+<html lang="es-AR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>MF - Soluciones Eléctricas | Electricistas matriculados en Rosario y Gran Rosario</title>
+  <meta name="description" content="Electricistas matriculados en Rosario y Gran Rosario. Instalaciones, obras, iluminación LED, habilitaciones de locales y urgencias. Escribinos por WhatsApp.">
+  <meta name="color-scheme" content="light dark">
+  <meta name="theme-color" content="#0B1B33" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#071226" media="(prefers-color-scheme: dark)">
+
+  <!-- Open Graph / Twitter (PENDIENTE: completar og:url con el dominio final) -->
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="es_AR">
+  <meta property="og:title" content="MF - Soluciones Eléctricas | Electricistas matriculados en Rosario y Gran Rosario">
+  <meta property="og:description" content="Electricistas matriculados en Rosario y Gran Rosario. Instalaciones, obras, iluminación LED, habilitaciones de locales y urgencias. Escribinos por WhatsApp.">
+  <meta property="og:image" content="assets/og-image.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="MF - Soluciones Eléctricas | Electricistas matriculados en Rosario y Gran Rosario">
+  <meta name="twitter:description" content="Electricistas matriculados en Rosario y Gran Rosario. Instalaciones, obras, iluminación LED, habilitaciones de locales y urgencias. Escribinos por WhatsApp.">
+  <meta name="twitter:image" content="assets/og-image.jpg">
+
+  <link rel="icon" href="assets/favicon.png" type="image/png">
+  <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Poppins:wght@600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+
+  <script>document.documentElement.classList.add("js");</script>
+  <script src="js/config.js" defer></script>
+  <script src="js/obras.js" defer></script>
+  <script src="js/resenas.js" defer></script>
+  <script src="js/main.js" defer></script>
+
+  <!-- Schema.org. telephone y employee se completan solos desde js/config.js (socios). PENDIENTE: url con el dominio -->
+  <script type="application/ld+json" id="schema-negocio">
+  {
+    "@context": "https://schema.org",
+    "@type": "Electrician",
+    "name": "MF - Soluciones Eléctricas",
+    "description": "Electricistas matriculados en Rosario y Gran Rosario. Instalaciones, obras, iluminación LED, habilitaciones de locales comerciales y urgencias eléctricas.",
+    "image": "assets/og-image.jpg",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Rosario",
+      "addressRegion": "Santa Fe",
+      "addressCountry": "AR"
+    },
+    "areaServed": [
+      { "@type": "City", "name": "Rosario" },
+      { "@type": "AdministrativeArea", "name": "Gran Rosario" }
+    ],
+    "openingHours": "Mo-Sa 09:00-16:00",
+    "employee": [
+      { "@type": "Person", "name": "Emanuel" },
+      { "@type": "Person", "name": "Pablo" }
+    ],
+    "sameAs": ["https://instagram.com/mf.electricistas", "https://maps.app.goo.gl/8yvqtyLmMafLoW5u7"]
+  }
+  </script>
+</head>
+<body>
+
+  <!-- Íconos (estilo línea, tipo Lucide). Se usan con <svg><use href="#i-..."/></svg> -->
+  <svg width="0" height="0" class="sprite" aria-hidden="true" focusable="false">
+    <defs>
+      <symbol id="i-home" viewBox="0 0 24 24"><path d="M3 10.5 12 3l9 7.5"/><path d="M5 9.5V21h14V9.5"/><path d="M9.5 21v-6h5v6"/></symbol>
+      <symbol id="i-store" viewBox="0 0 24 24"><path d="M3 9l1.5-5h15L21 9"/><path d="M3 9a3 3 0 0 0 6 0 3 3 0 0 0 6 0 3 3 0 0 0 6 0"/><path d="M5 12v9h14v-9"/><path d="M10 21v-5h4v5"/></symbol>
+      <symbol id="i-obra" viewBox="0 0 24 24"><path d="M2 18h20"/><path d="M4 18v-2a8 8 0 0 1 16 0v2"/><path d="M10 9V5h4v4"/><path d="M8 18v2M16 18v2"/></symbol>
+      <symbol id="i-lamp" viewBox="0 0 24 24"><path d="M8 3h8l3 8H5z"/><path d="M12 11v8"/><path d="M8 21h8"/></symbol>
+      <symbol id="i-zap" viewBox="0 0 24 24"><path d="M13 2 4 14h7l-1 8 9-12h-7z"/></symbol>
+      <symbol id="i-shield" viewBox="0 0 24 24"><path d="M12 3 4 6v6c0 5 3.5 8 8 9 4.5-1 8-4 8-9V6z"/><path d="m9 12 2 2 4-4"/></symbol>
+      <symbol id="i-chat" viewBox="0 0 24 24"><path d="M21 12a8 8 0 0 1-11.6 7.1L4 20l1-4.6A8 8 0 1 1 21 12z"/><path d="M8.5 10.5h7M8.5 13.5h4"/></symbol>
+      <symbol id="i-building" viewBox="0 0 24 24"><path d="M4 21V4h10v17"/><path d="M14 9h6v12"/><path d="M2 21h20"/><path d="M8 8h2M8 12h2M8 16h2M17 13h.01M17 17h.01"/></symbol>
+      <symbol id="i-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></symbol>
+      <symbol id="i-pin" viewBox="0 0 24 24"><path d="M12 21s-7-6.2-7-12a7 7 0 0 1 14 0c0 5.8-7 12-7 12z"/><circle cx="12" cy="9" r="2.5"/></symbol>
+      <symbol id="i-instagram" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><path d="M17.5 6.5h.01"/></symbol>
+      <symbol id="i-mail" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></symbol>
+      <symbol id="i-menu" viewBox="0 0 24 24"><path d="M4 7h16M4 12h16M4 17h16"/></symbol>
+      <symbol id="i-x" viewBox="0 0 24 24"><path d="M6 6l12 12M18 6 6 18"/></symbol>
+      <symbol id="i-left" viewBox="0 0 24 24"><path d="m15 18-6-6 6-6"/></symbol>
+      <symbol id="i-right" viewBox="0 0 24 24"><path d="m9 18 6-6-6-6"/></symbol>
+      <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></symbol>
+      <symbol id="i-send" viewBox="0 0 24 24"><path d="M22 2 11 13"/><path d="M22 2 15 22l-4-9-9-4z"/></symbol>
+      <symbol id="i-user" viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4 21a8 8 0 0 1 16 0"/></symbol>
+      <!-- Avatares de reseñas: siluetas rellenas; --av-bg separa la cara del pelo/cuerpo -->
+      <symbol id="i-hombre" viewBox="0 0 24 24"><circle cx="12" cy="9.4" r="4.4"/><path d="M3 24.5c.4-4.7 4.2-7.6 9-7.6s8.6 2.9 9 7.6z" style="stroke:var(--av-bg);stroke-width:1.2"/></symbol>
+      <symbol id="i-mujer" viewBox="0 0 24 24"><path d="M12 3.6c-3 0-5.2 2.4-5.2 5.4 0 1.4.3 2.6.6 3.6.3 1.4-.4 2.8-1.6 3.9 1.6 1 3.8 1.6 6.2 1.6s4.6-.6 6.2-1.6c-1.2-1.1-1.9-2.5-1.6-3.9.3-1 .6-2.2.6-3.6 0-3-2.2-5.4-5.2-5.4z"/><path d="M3.2 24.5c.4-4.4 4-7.2 8.8-7.2s8.4 2.8 8.8 7.2z"/></symbol>
+      <symbol id="i-star" viewBox="0 0 24 24"><path d="M12 2.6l2.9 5.9 6.5.9-4.7 4.6 1.1 6.5L12 17.4l-5.8 3.1 1.1-6.5-4.7-4.6 6.5-.9z"/></symbol>
+      <symbol id="i-check" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="m8 12 3 3 5-6"/></symbol>
+      <symbol id="i-images" viewBox="0 0 24 24"><rect x="7" y="3" width="14" height="14" rx="2"/><path d="M3 7v12a2 2 0 0 0 2 2h12"/><path d="m7 14 4-4 3 3 2-2 5 5"/></symbol>
+      <symbol id="i-whatsapp" viewBox="0 0 24 24"><path d="M3.5 20.5l1.3-4.3A8.5 8.5 0 1 1 8 19.3z"/><path d="M9 8.6c.1 3.3 3 6.2 6.3 6.3l1.1-1.5-2-1.1-.9.8a4.6 4.6 0 0 1-2.3-2.3l.8-.9-1.1-2z"/></symbol>
+    </defs>
+  </svg>
+
+  <a class="skip-link" href="#contenido">Saltar al contenido</a>
+
+  <!-- Los links con data-wa abren el selector Emanuel / Pablo (main.js).
+       data-wa-mensaje (opcional) cambia el mensaje según el contexto. -->
+
+  <!-- ===================== HEADER ===================== -->
+  <header class="header" id="header">
+    <div class="container header__inner">
+      <a href="#inicio" class="logo" aria-label="MF - Soluciones Eléctricas, ir al inicio">
+        <img class="logo__img" src="assets/logo/logo-mf-claro.png" alt="" width="40" height="40">
+        <span class="logo__text"><strong>MF</strong> Soluciones Eléctricas</span>
+      </a>
+
+      <nav class="nav" aria-label="Principal">
+        <button class="nav__toggle" type="button" aria-expanded="false" aria-controls="nav-menu">
+          <svg class="icon" aria-hidden="true"><use href="#i-menu"/></svg>
+          <span class="sr-only">Abrir menú</span>
+        </button>
+        <ul class="nav__menu" id="nav-menu">
+          <li><a href="#servicios">Servicios</a></li>
+          <li><a href="#obras">Obras</a></li>
+          <li><a href="#nosotros">Nosotros</a></li>
+          <li><a href="#contacto">Contacto</a></li>
+        </ul>
+      </nav>
+
+      <a class="btn btn--primary btn--sm header__cta" href="#contacto" data-wa target="_blank" rel="noopener">
+        <svg class="icon" aria-hidden="true"><use href="#i-whatsapp"/></svg>
+        <span class="header__cta-long">Escribinos por WhatsApp</span><span class="header__cta-short">WhatsApp</span>
+      </a>
+    </div>
+  </header>
+
+  <main id="contenido">
+
+    <!-- ===================== HERO (carrusel de obras de fondo) ===================== -->
+    <section class="hero" id="inicio" aria-labelledby="hero-title">
+      <!-- Las fotos salen de js/obras.js (hero: true). Esta primera se carga con prioridad. -->
+      <div class="hero__slides" aria-hidden="true">
+        <img class="hero__slide is-active" src="assets/obras/proyecto-entre-rios/01.jpg" alt="" width="583" height="824" fetchpriority="high" decoding="async">
+      </div>
+
+      <div class="container hero__inner">
+        <div class="hero__text">
+          <p class="eyebrow eyebrow--light">Electricistas en Rosario</p>
+          <h1 id="hero-title" class="hero__title">Todo lo eléctrico, <span class="hl">resuelto por profesionales.</span></h1>
+          <p class="hero__lead">Somos Emanuel y Pablo. Hacemos instalaciones, obras, urgencias y todo lo que tu casa o tu local necesite, en Rosario y Gran Rosario.</p>
+          <div class="hero__ctas">
+            <a class="btn btn--primary btn--xl" href="#contacto" data-wa target="_blank" rel="noopener">
+              <svg class="icon" aria-hidden="true"><use href="#i-whatsapp"/></svg>
+              Escribinos por WhatsApp
+            </a>
+            <a class="hero__rating" href="#opiniones" data-resenas-badge hidden></a>
+          </div>
+          <ul class="trust">
+            <li><svg class="icon" aria-hidden="true"><use href="#i-pin"/></svg><span data-config="zona">Rosario y Gran Rosario</span></li>
+            <li><svg class="icon" aria-hidden="true"><use href="#i-clock"/></svg><span data-config="horario">Lunes a Sábados · 09 a 16 hs</span></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="container hero__dots-wrap"><div class="hero__dots" aria-hidden="true"></div></div>
+    </section>
+
+    <!-- ===================== CONFÍAN EN NOSOTROS ===================== -->
+    <section class="section section--base estudios" id="estudios" aria-labelledby="estudios-title">
+      <div class="container">
+        <div class="estudios__head reveal">
+          <p class="eyebrow">Confían en nosotros</p>
+          <h2 id="estudios-title" class="section__title">Estudios de arquitectura que confían en nosotros</h2>
+          <p class="section__lead">Hacemos la parte eléctrica de proyectos de obra e interiorismo junto a estudios de Rosario.</p>
+        </div>
+        <ul class="estudios__logos reveal">
+          <li class="estudio"><img src="assets/estudios/dika.jpg" alt="Dika" width="500" height="500" loading="lazy"></li>
+          <li class="estudio"><img src="assets/estudios/m-estudio.jpg" alt="M. estudio" width="500" height="500" loading="lazy"></li>
+          <!-- logo claro sobre fondo oscuro: lleva --invert para que el filtro lo trate al revés -->
+          <li class="estudio estudio--invert"><img src="assets/estudios/malawi-studio.jpg" alt="Malawi Studio" width="500" height="500" loading="lazy"></li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ===================== SERVICIOS ===================== -->
+    <section class="section section--alt" id="servicios" aria-labelledby="servicios-title">
+      <div class="container">
+        <div class="section__head reveal">
+          <p class="eyebrow">Servicios</p>
+          <h2 id="servicios-title" class="section__title">Lo que necesites, lo resolvemos</h2>
+          <p class="section__lead">Del cambio de una luminaria a la instalación completa de una obra.</p>
+        </div>
+
+        <ul class="services">
+          <li class="card service reveal">
+            <span class="service__icon"><svg class="icon" aria-hidden="true"><use href="#i-home"/></svg></span>
+            <h3 class="service__title">Hogares</h3>
+            <p>Instalaciones, reparaciones, tableros, tomas, iluminación y todo lo de tu casa.</p>
+          </li>
+          <li class="card service reveal">
+            <span class="service__icon"><svg class="icon" aria-hidden="true"><use href="#i-store"/></svg></span>
+            <h3 class="service__title">Comercios</h3>
+            <p>Instalaciones para locales y <strong>habilitaciones de locales comerciales</strong>.</p>
+          </li>
+          <li class="card service reveal">
+            <span class="service__icon"><svg class="icon" aria-hidden="true"><use href="#i-obra"/></svg></span>
+            <h3 class="service__title">Proyectos de obra</h3>
+            <p>Instalaciones eléctricas completas, de cero, en obra nueva o reforma.</p>
+          </li>
+          <li class="card service reveal">
+            <span class="service__icon"><svg class="icon" aria-hidden="true"><use href="#i-lamp"/></svg></span>
+            <h3 class="service__title">Interiorismo</h3>
+            <p>Iluminación de diseño, <strong>tiras de LED</strong> y detalles que suman al proyecto.</p>
+          </li>
+          <li class="card service service--urgent reveal">
+            <span class="service__icon"><svg class="icon" aria-hidden="true"><use href="#i-zap"/></svg></span>
+            <h3 class="service__title">Urgencias</h3>
+            <p>¿Se cortó la luz o saltó algo? Escribinos y lo vemos.</p>
+            <a class="service__link" href="#contacto" data-wa data-wa-mensaje="¡Hola MF! Tengo una urgencia eléctrica, ¿me pueden ayudar?" target="_blank" rel="noopener">
+              Escribinos ahora <svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg>
+            </a>
+          </li>
+        </ul>
+
+        <ul class="chips reveal" aria-label="Algunos trabajos que hacemos">
+          <li>Cambio de luminarias</li>
+          <li>Tiras de LED</li>
+          <li>Tableros</li>
+          <li>Habilitaciones</li>
+          <li>Instalaciones completas</li>
+          <li>Urgencias eléctricas</li>
+          <li>Y mucho más</li>
+        </ul>
+
+        <div class="section__cta reveal">
+          <p>¿No ves lo que buscás? Consultanos igual, seguro lo hacemos.</p>
+          <a class="btn btn--primary" href="#contacto" data-wa data-wa-mensaje="¡Hola MF! Les escribo desde la web. Quería consultar por un trabajo eléctrico que no vi en la lista." target="_blank" rel="noopener">
+            <svg class="icon" aria-hidden="true"><use href="#i-whatsapp"/></svg>
+            Consultanos por WhatsApp
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== OBRAS (protagonista) ===================== -->
+    <section class="section dark obras circuit-bg" id="obras" aria-labelledby="obras-title">
+      <div class="container">
+        <div class="section__head reveal">
+          <p class="eyebrow eyebrow--light">Obras y trabajos</p>
+          <h2 id="obras-title" class="section__title">Mirá lo que hacemos</h2>
+          <p class="section__lead">Algunos de nuestros trabajos. Hay muchos más en nuestro Instagram.</p>
+        </div>
+
+        <div class="filters" role="group" aria-label="Filtrar trabajos por tipo">
+          <button type="button" class="filter is-active" data-filter="todos" aria-pressed="true">Todos</button>
+          <button type="button" class="filter" data-filter="hogares" aria-pressed="false">Hogares</button>
+          <button type="button" class="filter" data-filter="comercios" aria-pressed="false">Comercios</button>
+          <button type="button" class="filter" data-filter="obras" aria-pressed="false">Obras</button>
+          <button type="button" class="filter" data-filter="interiorismo" aria-pressed="false">Interiorismo</button>
+          <button type="button" class="filter" data-filter="led" aria-pressed="false">LED e iluminación</button>
+        </div>
+
+        <p class="sr-only" id="obras-status" aria-live="polite"></p>
+        <ul class="gallery" id="gallery"></ul>
+        <noscript><p class="gallery__noscript">Para ver la galería activá JavaScript, o mirá nuestros trabajos en <a href="https://instagram.com/mf.electricistas">Instagram</a>.</p></noscript>
+
+        <div class="obras__cta">
+          <a class="btn btn--primary" href="#contacto" data-wa data-wa-mensaje="¡Hola MF! Vi sus trabajos en la web y quiero consultar por algo parecido." target="_blank" rel="noopener">
+            <svg class="icon" aria-hidden="true"><use href="#i-whatsapp"/></svg>
+            ¿Querés algo así? Escribinos
+          </a>
+          <a class="btn btn--ghost" href="https://instagram.com/mf.electricistas" data-ig target="_blank" rel="noopener">
+            <svg class="icon" aria-hidden="true"><use href="#i-instagram"/></svg>
+            Ver más trabajos en Instagram
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== NOSOTROS ===================== -->
+    <section class="section section--base" id="nosotros" aria-labelledby="nosotros-title">
+      <div class="container">
+        <div class="about">
+          <div class="about__intro reveal">
+            <figure class="about__photo">
+              <img src="assets/equipo/ema-y-pablo.jpg" alt="Emanuel y Pablo instalando iluminación LED en los listones de madera de un techo" width="851" height="830" loading="lazy" decoding="async">
+            </figure>
+            <p class="eyebrow">Nosotros</p>
+            <h2 id="nosotros-title" class="section__title">Por qué elegirnos</h2>
+            <p class="about__text">Somos Emanuel y Pablo, dos electricistas de Rosario con más de 15 años en el rubro. Arrancamos haciendo trabajos en casas y hoy también hacemos obras completas junto a estudios de arquitectura. Nos gusta hacer las cosas bien, explicarte qué vamos a hacer y dejar todo prolijo.</p>
+          </div>
+
+          <ul class="features">
+            <li class="feature reveal">
+              <span class="feature__icon"><svg class="icon" aria-hidden="true"><use href="#i-shield"/></svg></span>
+              <div><h3>Trabajo prolijo y seguro</h3><p>Instalaciones hechas como corresponde, pensadas para durar.</p></div>
+            </li>
+            <li class="feature reveal">
+              <span class="feature__icon"><svg class="icon" aria-hidden="true"><use href="#i-chat"/></svg></span>
+              <div><h3>Te explicamos todo</h3><p>Sin vueltas ni letra chica: sabés qué hacemos y por qué.</p></div>
+            </li>
+            <li class="feature reveal">
+              <span class="feature__icon"><svg class="icon" aria-hidden="true"><use href="#i-building"/></svg></span>
+              <div><h3>Respaldo profesional</h3><p>Trabajamos con estudios de arquitectura en proyectos de obra.</p></div>
+            </li>
+            <li class="feature reveal">
+              <span class="feature__icon"><svg class="icon" aria-hidden="true"><use href="#i-clock"/></svg></span>
+              <div><h3>Respuesta rápida</h3><p>Escribinos por WhatsApp y te respondemos lo antes posible.</p></div>
+            </li>
+            <li class="feature reveal">
+              <span class="feature__icon"><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg></span>
+              <div><h3>Garantía en nuestros trabajos</h3><p>Respaldamos lo que hacemos: todos nuestros trabajos tienen garantía.</p></div>
+            </li>
+          </ul>
+        </div>
+
+        <ul class="stats reveal">
+          <li class="stat"><span class="stat__num"><span data-count="15">15</span>+</span><span class="stat__label">años de experiencia</span></li>
+          <li class="stat"><span class="stat__num"><span data-count="500">500</span>+</span><span class="stat__label">trabajos realizados</span></li>
+          <li class="stat"><span class="stat__num" data-count="3">3</span><span class="stat__label">estudios de arquitectura</span></li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ===================== TESTIMONIOS ===================== -->
+    <section class="section section--alt" id="opiniones" aria-labelledby="opiniones-title">
+      <div class="container">
+        <div class="section__head reveal">
+          <p class="eyebrow">Opiniones</p>
+          <h2 id="opiniones-title" class="section__title">Lo que dicen nuestros clientes</h2>
+          <p class="section__lead">Reseñas reales de clientes en Google.</p>
+        </div>
+
+        <!-- Puntaje, cantidad y reseñas salen de js/resenas.js -->
+        <div class="resenas__resumen reveal" id="resenas-resumen" hidden></div>
+        <div class="resenas__scroller reveal" role="region" aria-label="Reseñas de clientes en Google" tabindex="0">
+          <ul class="resenas" id="resenas-lista"></ul>
+        </div>
+        <noscript><p class="resenas__noscript">Mirá nuestras reseñas en <a href="https://maps.app.goo.gl/8yvqtyLmMafLoW5u7">Google</a>.</p></noscript>
+
+        <div class="resenas__ctas reveal">
+          <a class="btn btn--primary btn--lg" href="https://maps.app.goo.gl/8yvqtyLmMafLoW5u7" data-resenas-link="perfil" target="_blank" rel="noopener">
+            Ver todas las reseñas en Google <svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg>
+          </a>
+          <a class="link" href="https://maps.app.goo.gl/8yvqtyLmMafLoW5u7" data-resenas-link="dejar" target="_blank" rel="noopener">¿Ya trabajamos juntos? Dejanos tu reseña</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== CÓMO TRABAJAMOS ===================== -->
+    <section class="section dark circuit-bg" id="como-trabajamos" aria-labelledby="pasos-title">
+      <div class="container">
+        <div class="section__head reveal">
+          <p class="eyebrow eyebrow--light">Cómo trabajamos</p>
+          <h2 id="pasos-title" class="section__title">Simple, en tres pasos</h2>
+        </div>
+        <ol class="steps">
+          <li class="step reveal">
+            <span class="step__num" aria-hidden="true">1</span>
+            <h3>Nos escribís</h3>
+            <p>Por WhatsApp o el formulario, y nos contás qué necesitás.</p>
+          </li>
+          <li class="step reveal">
+            <span class="step__num" aria-hidden="true">2</span>
+            <h3>Lo vemos</h3>
+            <p>Coordinamos una visita o te pedimos fotos para entender el trabajo.</p>
+          </li>
+          <li class="step reveal">
+            <span class="step__num" aria-hidden="true">3</span>
+            <h3>Lo resolvemos</h3>
+            <p>Hacemos el trabajo y te dejamos todo funcionando. Joya.</p>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- ===================== CONTACTO ===================== -->
+    <section class="section section--base" id="contacto" aria-labelledby="contacto-title">
+      <div class="container">
+        <div class="section__head reveal">
+          <p class="eyebrow">Contacto</p>
+          <h2 id="contacto-title" class="section__title">Escribinos por WhatsApp</h2>
+          <p class="section__lead">Es la forma más rápida. Elegí con quién querés hablar.</p>
+        </div>
+
+        <div class="contact">
+          <div class="contact__wa">
+            <!-- Nombre, teléfono y link se completan desde CONFIG.socios (js/config.js) -->
+            <ul class="socios">
+              <li class="card socio" data-socio="0">
+                <span class="socio__avatar" aria-hidden="true">E</span>
+                <div class="socio__data">
+                  <h3 class="socio__name" data-socio-nombre>Emanuel</h3>
+                  <p class="socio__tel" data-socio-tel>+54 341 xxx xxx x</p>
+                </div>
+                <a class="btn btn--primary socio__btn" href="#contacto" data-socio-wa target="_blank" rel="noopener">
+                  <svg class="icon" aria-hidden="true"><use href="#i-whatsapp"/></svg>
+                  <span>Escribile por WhatsApp<span class="sr-only"> a <span data-socio-nombre>Emanuel</span></span></span>
+                </a>
+              </li>
+              <li class="card socio" data-socio="1">
+                <span class="socio__avatar" aria-hidden="true">P</span>
+                <div class="socio__data">
+                  <h3 class="socio__name" data-socio-nombre>Pablo</h3>
+                  <p class="socio__tel" data-socio-tel>+54 341 xxx xxx x</p>
+                </div>
+                <a class="btn btn--primary socio__btn" href="#contacto" data-socio-wa target="_blank" rel="noopener">
+                  <svg class="icon" aria-hidden="true"><use href="#i-whatsapp"/></svg>
+                  <span>Escribile por WhatsApp<span class="sr-only"> a <span data-socio-nombre>Pablo</span></span></span>
+                </a>
+              </li>
+            </ul>
+
+            <div class="urgent-note">
+              <svg class="icon" aria-hidden="true"><use href="#i-zap"/></svg>
+              <p><strong>¿Es una urgencia?</strong> <a href="#contacto" data-wa data-wa-mensaje="¡Hola MF! Tengo una urgencia eléctrica, ¿me pueden ayudar?" target="_blank" rel="noopener">Escribinos directo por WhatsApp.</a></p>
+            </div>
+          </div>
+
+          <form class="card form" id="contact-form" novalidate aria-labelledby="form-title">
+            <div class="form__head">
+              <h3 class="form__title" id="form-title">¿Preferís dejarnos los datos?</h3>
+              <p class="form__intro">Completalo y te armamos el mensaje para WhatsApp, listo para enviar.</p>
+            </div>
+            <div class="field">
+              <label for="f-nombre">Nombre</label>
+              <input id="f-nombre" name="nombre" type="text" autocomplete="name" required aria-describedby="e-nombre">
+              <p class="field__error" id="e-nombre"></p>
+            </div>
+            <div class="field">
+              <label for="f-telefono">Teléfono / WhatsApp</label>
+              <input id="f-telefono" name="telefono" type="tel" inputmode="tel" autocomplete="tel" required aria-describedby="e-telefono">
+              <p class="field__error" id="e-telefono"></p>
+            </div>
+            <div class="field">
+              <label for="f-zona">Barrio o localidad</label>
+              <input id="f-zona" name="zona" type="text" autocomplete="address-level2" required aria-describedby="e-zona">
+              <p class="field__error" id="e-zona"></p>
+            </div>
+            <div class="field">
+              <label for="f-tipo">Tipo de trabajo</label>
+              <select id="f-tipo" name="tipo" required aria-describedby="e-tipo">
+                <option value="">Elegí una opción</option>
+                <option>Hogar</option>
+                <option>Comercio</option>
+                <option>Obra</option>
+                <option>Interiorismo</option>
+                <option>Urgencia</option>
+                <option>Otro</option>
+              </select>
+              <p class="field__error" id="e-tipo"></p>
+            </div>
+            <div class="field field--full">
+              <label for="f-mensaje">Contanos qué necesitás</label>
+              <textarea id="f-mensaje" name="mensaje" rows="4" required aria-describedby="e-mensaje"></textarea>
+              <p class="field__error" id="e-mensaje"></p>
+            </div>
+            <button class="btn btn--primary form__submit" type="submit">
+              <svg class="icon" aria-hidden="true"><use href="#i-send"/></svg>
+              Enviar consulta
+            </button>
+            <p class="form__status" id="form-status" role="status" aria-live="polite"></p>
+          </form>
+
+          <aside class="contact__info" aria-label="Más datos de contacto">
+            <ul class="info-list">
+              <li>
+                <svg class="icon" aria-hidden="true"><use href="#i-instagram"/></svg>
+                <div><span class="info-list__label">Instagram</span>
+                  <a href="https://instagram.com/mf.electricistas" data-ig target="_blank" rel="noopener"><span data-config="instagramUser">@mf.electricistas</span></a>
+                </div>
+              </li>
+              <li data-email-row hidden>
+                <svg class="icon" aria-hidden="true"><use href="#i-mail"/></svg>
+                <div><span class="info-list__label">Email</span><a href="#contacto" data-email>email</a></div>
+              </li>
+              <li>
+                <svg class="icon" aria-hidden="true"><use href="#i-clock"/></svg>
+                <div><span class="info-list__label">Horario</span><span data-config="horario">Lunes a Sábados · 09 a 16 hs</span></div>
+              </li>
+              <li>
+                <svg class="icon" aria-hidden="true"><use href="#i-pin"/></svg>
+                <div><span class="info-list__label">Zona de cobertura</span><span data-config="zona">Rosario y Gran Rosario</span></div>
+              </li>
+            </ul>
+            <div class="map">
+              <iframe title="Ubicación de MF - Soluciones Eléctricas en Google Maps" src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d29233.98872867302!2d-60.6865821!3d-32.9245693!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95b64d15c66e9a05%3A0x8e2924083cbd4ef5!2sElectricista%20Matriculado%20Rosario%20MF!5e1!3m2!1ses-419!2sar!4v1793933890720!5m2!1ses-419!2sar" allowfullscreen loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe>
+            </div>
+            <a class="link map__link" href="https://maps.app.goo.gl/8yvqtyLmMafLoW5u7" data-resenas-link="perfil" target="_blank" rel="noopener">
+              Ver en Google Maps <svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg>
+            </a>
+          </aside>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ===================== FOOTER ===================== -->
+  <footer class="footer dark">
+    <div class="container footer__inner">
+      <div class="footer__brand">
+        <a href="#inicio" class="logo" aria-label="MF - Soluciones Eléctricas, volver al inicio">
+          <img class="logo__img" src="assets/logo/logo-mf-claro.png" alt="" width="40" height="40">
+          <span class="logo__text"><strong>MF</strong> Soluciones Eléctricas</span>
+        </a>
+        <p>Todo lo eléctrico, resuelto.</p>
+      </div>
+      <nav aria-label="Pie de página">
+        <h2 class="footer__title">Secciones</h2>
+        <ul class="footer__links">
+          <li><a href="#servicios">Servicios</a></li>
+          <li><a href="#obras">Obras</a></li>
+          <li><a href="#nosotros">Nosotros</a></li>
+          <li><a href="#contacto">Contacto</a></li>
+        </ul>
+      </nav>
+      <div>
+        <h2 class="footer__title">Contacto</h2>
+        <ul class="footer__info">
+          <li><svg class="icon" aria-hidden="true"><use href="#i-whatsapp"/></svg><a href="#contacto" data-wa target="_blank" rel="noopener">WhatsApp</a></li>
+          <li><svg class="icon" aria-hidden="true"><use href="#i-instagram"/></svg><a href="https://instagram.com/mf.electricistas" data-ig target="_blank" rel="noopener"><span data-config="instagramUser">@mf.electricistas</span></a></li>
+          <li><svg class="icon" aria-hidden="true"><use href="#i-clock"/></svg><span data-config="horario">Lunes a Sábados · 09 a 16 hs</span></li>
+          <li><svg class="icon" aria-hidden="true"><use href="#i-pin"/></svg><span data-config="zona">Rosario y Gran Rosario</span></li>
+        </ul>
+      </div>
+    </div>
+    <div class="container footer__bottom">
+      <p>© 2026 MF - Soluciones Eléctricas</p>
+      <p class="footer__credit">Sitio por ZZ Digital</p>
+    </div>
+  </footer>
+
+  <!-- ===================== WHATSAPP FLOTANTE ===================== -->
+  <a class="wa-float" href="#contacto" data-wa target="_blank" rel="noopener" aria-label="Escribinos por WhatsApp">
+    <span class="wa-float__tip" aria-hidden="true">¿Hablamos?</span>
+    <svg class="icon" aria-hidden="true"><use href="#i-whatsapp"/></svg>
+  </a>
+
+  <!-- ===================== SELECTOR DE SOCIO (WhatsApp) =====================
+       <dialog> abierto con showModal(): el navegador lo expone como role="dialog"
+       con aria-modal="true", atrapa el foco y cierra con Escape. -->
+  <dialog class="wa-picker" id="wa-picker" aria-labelledby="wa-picker-title">
+    <div class="wa-picker__inner">
+      <div class="wa-picker__head">
+        <h2 class="wa-picker__title" id="wa-picker-title">¿Con quién querés hablar?</h2>
+        <button class="wa-picker__close" type="button" data-picker-close>
+          <svg class="icon" aria-hidden="true"><use href="#i-x"/></svg><span class="sr-only">Cerrar</span>
+        </button>
+      </div>
+      <ul class="wa-picker__list" id="wa-picker-list"></ul>
+      <p class="wa-picker__note">Si uno está en una obra, probá con el otro. Joya.</p>
+    </div>
+  </dialog>
+
+  <!-- ===================== LIGHTBOX ===================== -->
+  <dialog class="lightbox" id="lightbox" aria-labelledby="lb-title">
+    <div class="lightbox__inner">
+      <button class="lightbox__close" type="button" data-lb="close">
+        <svg class="icon" aria-hidden="true"><use href="#i-x"/></svg><span class="sr-only">Cerrar</span>
+      </button>
+      <figure class="lightbox__figure">
+        <div class="lightbox__media" id="lb-media"></div>
+        <figcaption class="lightbox__caption">
+          <div class="lightbox__text">
+            <span class="tag" id="lb-tag"></span>
+            <h3 id="lb-title"></h3>
+            <p id="lb-desc"></p>
+            <p class="lightbox__count" id="lb-count"></p>
+          </div>
+          <div class="lightbox__navs">
+            <button class="lightbox__nav lightbox__nav--prev" type="button" data-lb="prev">
+              <svg class="icon" aria-hidden="true"><use href="#i-left"/></svg><span class="sr-only">Foto anterior</span>
+            </button>
+            <button class="lightbox__nav lightbox__nav--next" type="button" data-lb="next">
+              <svg class="icon" aria-hidden="true"><use href="#i-right"/></svg><span class="sr-only">Foto siguiente</span>
+            </button>
+          </div>
+        </figcaption>
+      </figure>
+      <div class="lightbox__thumbs" id="lb-thumbs" role="group" aria-label="Fotos de la obra"></div>
+    </div>
+  </dialog>
+
+</body>
+</html>
